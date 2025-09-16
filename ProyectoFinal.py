@@ -125,8 +125,8 @@ plt.show()
 t_sym, g_sym, hi_sym, vi_sym = sp.symbols('t g h0 v0')
 
 # Definir expresiones simbólicas
-#h_sym = hi_sym + vi_sym * t_sym - sp.Rational(1,2) * g_sym * t_sym**2
-#v_sym = sp.diff(h_sym, t_sym)
+h_sym = hi_sym + vi_sym * t_sym - sp.Rational(1,2) * g_sym * t_sym**2
+v_sym = sp.diff(h_sym, t_sym)
 a_sym = sp.diff(v_sym, t_sym)
 
 h_sym, v_sym, a_sym
@@ -144,4 +144,5 @@ t_stat = (gravedad_estimada_v - gravedad) / std_err
 p_two_sided = 2 * stats.t.sf(np.abs(t_stat), dof)
 
 print(f"t-statistic (g_est_vs_gravedad): {t_stat:.4f}, p-value (two-sided): {p_two_sided:.4f}")
+
 
