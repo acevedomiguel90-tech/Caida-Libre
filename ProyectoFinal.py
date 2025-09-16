@@ -64,13 +64,13 @@ if opcion == "Simulados":
     h_vals = h0 - 0.5*g*t_vals**2
     df = pd.DataFrame({"Tiempo (s)": t_vals, "Altura (m)": h_vals})
     st.write("**Vista previa de datos simulados:**")
-    st.dataframe(df.head(10))
+    st.dataframe(df.head(20))
 else:
     archivo = st.file_uploader("Sube un archivo CSV con columnas 'Tiempo (s)' y 'Altura (m)'", type=["csv"])
     if archivo is not None:
         df = pd.read_csv(archivo)
         st.write("**Vista previa de datos cargados:**")
-        st.dataframe(df.head(10))
+        st.dataframe(df.head(20))
 # ------------------------------
 # Gráfico de altura
 # ------------------------------
@@ -107,6 +107,7 @@ st.write("""
 2. El tiempo de impacto calculado simbólicamente coincide con la simulación.
 3. La velocidad en el impacto es aproximadamente la esperada para un objeto en caída libre desde 100 m.
 """)
+
 
 
 
