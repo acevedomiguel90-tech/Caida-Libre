@@ -25,11 +25,11 @@ dh = sp.diff(h, t)  # Derivada: velocidad
 st.header("Parámetros Iniciales")
 st.write("Altura inicial:")
 st.write(sp.latex(h0))        
-st.write("velocidad inicial:")
+st.write("Velocidad inicial:")
 st.write(sp.latex(v0))  
 st.write("Gravedad:")
 st.write(sp.latex(g))  
-st.header("📌 Fórmulas en función de los parámetros iniciales")
+st.header("📌 Fórmulas y Cálculos en función de los parámetros iniciales")
 st.write("**Altura (h(t))**:")
 st.latex(sp.latex(h))
 
@@ -107,6 +107,7 @@ st.write("""
 2. El tiempo de impacto calculado simbólicamente coincide con la simulación.
 3. La velocidad en el impacto es aproximadamente la esperada para un objeto en caída libre desde 100 m.
 """)
+
 
 
 
