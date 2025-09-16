@@ -54,6 +54,9 @@ st.latex(f"v = {v_impact:.2f} \\, m/s")
 # ------------------------------
 # Datos: simulados o cargados
 # ------------------------------
+st.header("📊 Datos para el análisis")
+opcion = st.radio("Selecciona la fuente de datos:", ["Simulados", "Cargar CSV"])
+
 if opcion == "Simulados":
     # Generar datos simulados
     t_vals = np.linspace(0, float(t_impact), 50)
@@ -122,6 +125,7 @@ st.write("""
 2. El tiempo de impacto calculado simbólicamente coincide con la simulación.
 3. La velocidad en el impacto es aproximadamente la esperada para un objeto en caída libre desde 100 m.
 """)
+
 
 
 
