@@ -22,8 +22,14 @@ h0, g, v0 = 100, 9.81, 0
 # Ecuación de la altura en función del tiempo
 h = h0 + v0*t - (1/2)*g*t**2
 dh = sp.diff(h, t)  # Derivada: velocidad
-
-st.header("📌 Modelos simbólicos")
+st.header("Parámetros Iniciales")
+st.write("Altura inicial:")
+st.write(sp.latex(h0))        
+st.write("velocidad inicial:")
+st.write(sp.latex(v0))  
+st.write("Gravedad:")
+st.write(sp.latex(g))  
+st.header("📌 Fórmulas en función de los parámetros iniciales")
 st.write("**Altura (h(t))**:")
 st.latex(sp.latex(h))
 
@@ -101,5 +107,6 @@ st.write("""
 2. El tiempo de impacto calculado simbólicamente coincide con la simulación.
 3. La velocidad en el impacto es aproximadamente la esperada para un objeto en caída libre desde 100 m.
 """)
+
 
 
